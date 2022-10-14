@@ -14,6 +14,9 @@ var listSortDuplicates = [0,1,1,2,3,3,4,5,6,6]
 70. Climbing Stairs
     Dynamic programming
  
+104. Maximum Depth of Binary Tree
+    return max(maxDepth(root.left), maxDepth(root.right)) + 1
+ 
 136. Single Number
     var result = 0
     for i in nums { result ^= i }
@@ -42,26 +45,3 @@ var listSortDuplicates = [0,1,1,2,3,3,4,5,6,6]
 
 
 
-
-func invertTree(_ root: TreeNode?) -> TreeNode? {
-
- guard let root = root else { return nil }
- guard rootNode.left != nil && rootNode.right != nil else { return rootNode }
-   
- root.left = invertTree(root.right)
- root.right = invertTree(root.left)
-    
- return root
-}
-
-func invertTree(_ root: TreeNode?) -> TreeNode? {
-    guard let root == root else { return nil }
-
-    let left = invertTree(root.left)
-    let right = invertTree(root.right)
-    
-    root.left = left
-    root.right = right
-
-    return root
-}

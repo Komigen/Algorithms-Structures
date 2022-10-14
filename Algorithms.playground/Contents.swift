@@ -1,5 +1,7 @@
 import Foundation
 
+//https://www.youtube.com/playlist?list=PLUb9K99oQb2uTprOy3V9E1fXpydcMmTRK - задачи, easy level
+
 var list = [0,8,3,5,1,6,4,9,2,7]
 var listSort = [0,1,2,3,4,5,6,7,8,9]
 
